@@ -16,8 +16,6 @@ tags:
   - Linux
 ---
 
-# We Have AI, So Why Are We Still Clicking?
-
 ## When Coding Became… Talking
 
 In 2025, AI coding assistants became a normal part of my daily development workflow. At first, I used them for small code snippets, explanations, refactoring, and debugging support. Over time, my work shifted from writing traditional code to giving instructions. I still write code occasionally, but most of my effort is now spent describing tasks, providing context, correcting results, asking for alternatives, and reviewing solutions.
