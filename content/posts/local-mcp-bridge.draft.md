@@ -21,6 +21,10 @@ What if ChatGPT could access your local browser or files in real-time?
 
 Imagine the possibilities: scraping data from a dashboard behind a complex login, interacting with a local development environment, or saving generated code directly to your disk without the tedious copy-paste cycle. Normally, ChatGPT is isolated in the cloud; it lacks your active sessions, local cookies, and direct access to your file system.
 
+
+https://github.com/user-attachments/assets/7fea5fba-9cc2-40ea-8354-487cb4d54083
+
+
 ## The Idea: Bridging the Gap
 
 The core concept is to expose local Model Context Protocol (MCP) servers to ChatGPT via a secure bridge. Instead of the LLM trying to "reach into" your computer, we create a relay that translates requests.
