@@ -1,6 +1,6 @@
 ---
 title: 'How I Met QMK: My Journey to Custom Ergonomic Keyboards'
-date: '2025-06-01'
+date: '2026-06-01'
 author: Volodymyr Shcherbyna
 category: Hardware
 excerpt: >-
