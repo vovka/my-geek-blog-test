@@ -23,6 +23,10 @@ A developer could be good at writing code while having little architectural expe
 
 AI-assisted development is changing that.
 
+![A developer reviewing generated code on screen](https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=1600)
+
+*Photo by [Jakub Zerdzicki on Pexels](https://www.pexels.com/photo/close-up-of-programmer-typing-code-on-laptop-36496927/).*
+
 Today, coding agents can implement features, write tests, run applications, interact with them through a browser or desktop interface, and even attempt to debug and fix failures. The obvious question is: if AI can write most of the code, why do we still need programmers?
 
 My answer is that programmers are becoming architects, supervisors, and validators of an increasingly automated development process.
@@ -61,6 +65,10 @@ That is why I expect the next wave of demand to focus on cleanup.
 
 We will need engineers who can enter AI-generated codebases, understand what they were supposed to do, identify structural problems, remove unnecessary code, restore architectural boundaries, improve testing, and make the systems maintainable.
 
+![Two developers reviewing code together](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1600)
+
+*Photo by [Christina Morillo on Pexels](https://www.pexels.com/photo/two-women-looking-at-the-code-at-laptop-1181263/).*
+
 This is already starting to happen. One example is Slopfix, a company positioning itself around cleaning up AI-generated codebases. Whether or not that exact company succeeds, the need itself looks real to me.
 
 We probably still do not have a stable name for this role. Some possible names might be:
@@ -80,10 +88,6 @@ The required skills are not new. They are the fundamentals we already know:
 AI is making implementation cheaper. But it is not making engineering responsibility disappear. If anything, it makes responsibility more important.
 
 — **Volodymyr Shcherbyna**
-
-![Tangled computer cables as a metaphor for code slop](https://images.unsplash.com/photo-1473831818960-c89731aabc3e?auto=format&fit=crop&w=1600&q=85)
-
-*Photo by Randall Bruder on Unsplash.*
 
 ---
 
