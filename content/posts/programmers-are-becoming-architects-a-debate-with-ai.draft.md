@@ -18,7 +18,7 @@ tags:
 
 This post continues a thought from my earlier article, [**We No Longer Own the Code**](/we-no-longer-own-the-code). But this time I want to try a new format: a small debate with AI. First comes my position, argument by argument. Alongside each one, I let AI respond to it directly—supporting some parts, challenging others, and checking whether the argument holds.
 
-::::dialogue
+:::dialogue
 :::primary
 
 For most of software development’s history, writing code was the central skill of a programmer. Developers also made architectural decisions, wrote tests, reviewed changes, and maintained systems, but these responsibilities were often secondary to implementation.
@@ -32,9 +32,9 @@ A developer could be good at writing code while having little architectural expe
 I agree with the core direction of this argument, but I would narrow some of its claims.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 AI-assisted development is changing that.
@@ -52,9 +52,9 @@ Today, coding agents can implement features, write tests, run applications, inte
 The strongest version of the idea is not that developers no longer need code knowledge. It is that code production is becoming cheaper while architectural judgment, specification, review, integration, and maintenance are becoming more valuable.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 My answer is that programmers are becoming architects, supervisors, and validators of an increasingly automated development process.
@@ -66,9 +66,9 @@ My answer is that programmers are becoming architects, supervisors, and validato
 That narrower claim is well supported. GitLab’s 2026 survey reported that **85%** of respondents said AI had shifted the bottleneck from writing code to reviewing and validating it, while **82%** believed AI-generated code could create technical debt their organizations were not prepared to manage.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 ### Vibe coding versus engineering
@@ -84,9 +84,9 @@ A vibe coder asks AI to build something and lets the AI decide how to do it. The
 The distinction between vibe coding and engineering is also sensible, but it should not be reduced to whether somebody specified a language or framework. The deeper distinction is **accountability**. Martin Fowler described vibe coding as building through prompts without really examining the generated code. A developer may let AI choose a framework and still work responsibly if they evaluate the result, understand the tradeoffs, and remain accountable for the system.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 An engineer works differently.
@@ -100,9 +100,9 @@ Before starting implementation, the engineer defines the architecture, the modul
 There is also evidence behind the concern about technical debt. A 2026 study covering **304,362 verified AI-authored commits** across **6,275 repositories** found that more than **15%** of commits from every analyzed assistant introduced at least one detected issue, and **24.2%** of tracked issues remained in the latest revision of those repositories.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 This, I think, is becoming our job now.
@@ -114,9 +114,9 @@ This, I think, is becoming our job now.
 At the same time, the claim that AI can already “completely write all our code” is too strong. Coding agents are useful and often impressive, but their performance on larger, existing systems remains uneven. METR’s 2025 study found that experienced open-source developers took **19% longer** when using early-2025 AI tools on repositories they knew well. Stack Overflow’s 2025 survey also showed broad adoption and perceived productivity gains, but persistent distrust in the accuracy of AI output.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 We should design before implementation starts. We should define the units, the modules, how they interact, and how the data flows between them. We should tell the AI exactly what structures to build, what standards to follow, and what kinds of tests to produce. Then we let it implement.
@@ -128,9 +128,9 @@ We should design before implementation starts. We should define the units, the m
 So yes: your argument points to a real shift. But the safest conclusion is this:
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 After that, our responsibility is verification. We must check whether the AI respected our constraints, whether the application behaves as expected, and whether the resulting system is still understandable and maintainable. If implementation changes the design, we should update the architectural documentation accordingly.
@@ -142,9 +142,9 @@ After that, our responsibility is verification. We must check whether the AI res
 **Developers are not simply becoming architects. They are becoming specification authors, system designers, reviewers, investigators, and accountable owners.**
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 In other words, we increasingly babysit and supervise an automated development process. We validate the outcome, close the development cycle, and then begin the next cycle—faster than before—in order to validate business ideas and assumptions more quickly.
@@ -160,9 +160,9 @@ In other words, we increasingly babysit and supervise an automated development p
 Manual coding becomes a smaller part of the value they provide. But implementation literacy still matters, because architecture without code understanding can easily become empty theory.
 
 :::
-::::
+:::
 
-::::dialogue
+:::dialogue
 :::primary
 
 ### The coming wave of slop cleanup
@@ -220,4 +220,4 @@ Your prediction of a cleanup industry is plausible. It is already visible in ear
 — **GPT-5.6 Thinking**
 
 :::
-::::
+:::
