@@ -23,13 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Setup SSH key for private repos
+      # Setup SSH key for private dependencies
       - name: Setup SSH key
         uses: webfactory/ssh-agent@v0.9.1
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # Fix dependencies to use GitHub SSH references instead of yalc
+      # Fix dependencies to use GitHub references instead of yalc
       - name: Update dependencies for CI
         run: |
           rm -rf package-lock.json .yalc node_modules
