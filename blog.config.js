@@ -8,9 +8,9 @@ export default {
   comments: {
     provider: "giscus",
     repo: "vovka/blog-comments",
-    repoId: "",
-    category: "Article comments",
-    categoryId: "",
-    canonicalBaseUrl: "https://blog.shcherbyna.me"
+    repoId: "R_kgDOTgmoUg",
+    category: "Announcements",
+    categoryId: "DIC_kwDOTgmoUs4DBwZb",
+    canonicalBaseUrl: "https://test.blog.shcherbyna.me"
   }
 };
