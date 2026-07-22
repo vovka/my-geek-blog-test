@@ -33,7 +33,7 @@ jobs:
       - name: Update dependencies for CI
         run: |
           rm -rf package-lock.json .yalc node_modules
-          npm pkg set dependencies.blog-engine="git+https://github.com/vovka/blog-engine.git"
+          npm pkg set dependencies.blog-engine="git+ssh://git@github.com/geek-blog/blog-engine.git"
           npm pkg set dependencies.blog-enhancer="git+ssh://git@github.com/geek-blog/blog-enhancer.git"
           echo "Updated package.json dependencies"
 
