@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "engine": {
     "repository": "https://github.com/vovka/blog-engine.git",
-    "commit": "88856b8df9b7b63342f6341dcd2b6e8b9a525827",
+    "commit": "7a11e9c125c81d3de9d9d72ea87df36f22d5bc24",
     "package": "blog-engine",
     "commands": [
       "setup",
