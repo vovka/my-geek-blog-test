@@ -1,19 +1,25 @@
-# Test Blog Architecture
+# Blog Deployment Architecture
 
-The test blog consumes the public canonical engine at an exact commit through the engine-owned Yalc workspace.
-The fallback mirror is not a dependency. The optional private enhancer installs only into ignored tooling after
-GitHub entitlement succeeds.
+The same content history deploys independently from two public repositories. `vovka/my-geek-blog` serves
+`blog.shcherbyna.me`; `vovka/my-geek-blog-test` serves `test.blog.shcherbyna.me`. Neither repository is a GitHub
+fork of the other and no workflow synchronizes them automatically.
 
 `blog.config.js` owns brand text, base path, the stable Giscus repository/category IDs, canonical comment backlink,
-and consent policy. The GitHub Pages environment owns the test canonical URL, non-indexing robots policy, test-only
-analytics hosts, and test GA4/Clarity IDs.
+and consent policy. The canonical comment backlink always points to production so both deployments share the same
+Giscus discussions.
 
-`npm run build` is shared by local validation and deployment. It hydrates `.yalc/blog-engine`, verifies the tracked
-npm lock, processes Markdown, writes test-safe `robots.txt` and `sitemap.xml`, and builds the site. Workflows never
-rewrite manifests or delete locks.
+Each repository's `github-pages` environment owns its site URL, site profile, robots policy, allowed analytics
+hosts, and GA4/Clarity IDs. Production uses the production hostname, `production` profile, indexable robots policy,
+and production analytics. Test uses the test hostname, `test` profile, noindex robots policy, and isolated test
+analytics.
+
+`npm run build` is shared by local validation and deployment. It hydrates the exact public canonical engine commit
+through the engine-owned Yalc workspace, verifies the tracked npm lock, processes Markdown, writes profile-specific
+`robots.txt` and `sitemap.xml`, and builds the site. Workflows never rewrite manifests or delete locks.
 
 Comments are stored in `vovka/my-geek-blog-comments`. The repository and category IDs remain unchanged across the
-rename so historical Giscus discussions keep their mapping.
+deployment split so historical Giscus discussions keep their mapping. The seven migrated production article paths
+remain stable in both deployments.
 
 ---
-Last updated: 2026-07-23
+Last updated: 2026-07-24

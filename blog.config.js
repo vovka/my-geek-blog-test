@@ -10,7 +10,7 @@ export default {
     repoId: "R_kgDOTgmoUg",
     category: "Announcements",
     categoryId: "DIC_kwDOTgmoUs4DBwZb",
-    canonicalBaseUrl: "https://test.blog.shcherbyna.me"
+    canonicalBaseUrl: "https://blog.shcherbyna.me"
   },
   analytics: {
     consent: {
