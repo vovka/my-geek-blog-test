@@ -1,9 +1,12 @@
 {
   "name": "app",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "process": "blog-engine process",
+    "build": "blog-engine build",
+    "test": "npm run process && npm run build"
   },
   "keywords": [],
   "author": "",
