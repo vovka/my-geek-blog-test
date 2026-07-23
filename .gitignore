@@ -3,11 +3,13 @@ dist
 .yalc
 yalc.lock
 *.log
+.env*.local
 
 # Auto-generated files
 content/posts.js
 content/metadata.js
 content/pages.js
+public/sitemap.xml
 
 # Enhanced files (artifacts only, not committed)
 *-enhanced.md
