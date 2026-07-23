@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "engine": {
+    "repository": "https://github.com/geek-blog/blog-engine.git",
+    "commit": "c69d459a586fe043f500444e3cae5a5340e64fb7",
+    "package": "blog-engine",
+    "commands": [
+      "setup",
+      "dev",
+      "build",
+      "process",
+      "preview",
+      "enhance",
+      "doctor",
+      "update"
+    ]
+  },
+  "enhancer": {
+    "optional": true,
+    "repository": "https://github.com/geek-blog/blog-enhancer.git",
+    "commit": "878921443bc72b49f9573d06c78af8a229de5024",
+    "package": "blog-enhancer",
+    "commands": [
+      "enhance"
+    ]
+  }
+}

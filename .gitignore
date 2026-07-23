@@ -1,7 +1,8 @@
-node_modules
-dist
-.yalc
+node_modules/
+dist/
+.yalc/
 yalc.lock
+.geek-blog/
 *.log
 .env*.local
 
@@ -10,6 +11,7 @@ content/posts.js
 content/metadata.js
 content/pages.js
 public/sitemap.xml
+public/robots.txt
 
 # Enhanced files (artifacts only, not committed)
 *-enhanced.md

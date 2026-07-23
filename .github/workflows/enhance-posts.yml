@@ -136,24 +136,12 @@ on:
 jobs:
   enhance:
     runs-on: ubuntu-latest
+    env:
+      GEEK_BLOG_TOKEN: ${{ secrets.GEEK_BLOG_TOKEN }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      # Setup SSH key for private repos
-      - name: Setup SSH key
-        uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      # Fix dependencies to use GitHub SSH references instead of yalc
-      - name: Update dependencies for CI
-        run: |
-          rm -rf package-lock.json .yalc node_modules
-          npm pkg set dependencies.blog-engine="git+ssh://git@github.com/geek-blog/blog-engine.git"
-          npm pkg set dependencies.blog-enhancer="git+ssh://git@github.com/geek-blog/blog-enhancer.git"
-          echo "Updated package.json dependencies"
 
       - name: Determine final configuration
         id: config
@@ -295,9 +283,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Setup API keys
         id: api-keys
         run: |
@@ -325,7 +310,7 @@ jobs:
           echo "## 🤖 Enhancement Agent Output" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-          npx blog-enhancer enhance 2>&1 | tee agent-output.log
+          npm run enhance -- 2>&1 | tee agent-output.log
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
