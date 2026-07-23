@@ -21,8 +21,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     env:
       VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
-      VITE_SITE_PROFILE: test
-      VITE_ROBOTS_INDEX: "false"
+      VITE_SITE_PROFILE: ${{ vars.VITE_SITE_PROFILE }}
+      VITE_ROBOTS_INDEX: ${{ vars.VITE_ROBOTS_INDEX }}
       VITE_ANALYTICS_ENABLED: ${{ vars.VITE_ANALYTICS_ENABLED }}
       VITE_ANALYTICS_ENVIRONMENT: ${{ vars.VITE_ANALYTICS_ENVIRONMENT }}
       VITE_ANALYTICS_ALLOWED_HOSTS: ${{ vars.VITE_ANALYTICS_ALLOWED_HOSTS }}
