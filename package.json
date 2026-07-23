@@ -4,19 +4,21 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "process": "blog-engine process",
-    "build": "blog-engine build",
-    "test": "npm run process && npm run build"
+    "workspace": "node scripts/geek-blog.js",
+    "setup": "node scripts/geek-blog.js setup",
+    "process": "node scripts/geek-blog.js process",
+    "dev": "node scripts/geek-blog.js dev",
+    "build": "node scripts/geek-blog.js build",
+    "preview": "node scripts/geek-blog.js preview",
+    "enhance": "node scripts/geek-blog.js enhance",
+    "doctor": "node scripts/geek-blog.js doctor",
+    "test": "npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "blog-engine": "file:.yalc/blog-engine",
-    "blog-enhancer": "file:.yalc/blog-enhancer"
-  },
-  "devDependencies": {
-    "yalc": "^1.0.0-pre.53"
+    "blog-engine": "file:.yalc/blog-engine"
   }
 }

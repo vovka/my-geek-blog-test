@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      BLOG_ENGINE_REF: ${{ vars.BLOG_ENGINE_REF }}
       VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
       VITE_SITE_PROFILE: test
       VITE_ROBOTS_INDEX: "false"
@@ -36,48 +35,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      # Setup SSH key for private dependencies
-      - name: Setup SSH key
-        uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      # Fix dependencies to use GitHub references instead of yalc
-      - name: Update dependencies for CI
-        run: |
-          ENGINE_REF="$BLOG_ENGINE_REF"
-          if [[ ! "$ENGINE_REF" =~ ^[0-9a-f]{40}$ ]]; then
-            echo "::error::Set BLOG_ENGINE_REF to the reviewed analytics-capable vovka/blog-engine commit SHA."
-            exit 1
-          fi
-          rm -rf package-lock.json .yalc node_modules
-          npm pkg set dependencies.blog-engine="git+ssh://git@github.com/vovka/blog-engine.git#$ENGINE_REF"
-          npm pkg set dependencies.blog-enhancer="git+ssh://git@github.com/geek-blog/blog-enhancer.git"
-          echo "Updated package.json dependencies"
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Process markdown posts
-        run: npx blog-engine process
-
-      - name: Build site
-        run: npx blog-engine build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Build through the pinned workspace
+        run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
+          path: dist
+      - id: deployment
         uses: actions/deploy-pages@v4
