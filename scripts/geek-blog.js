@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
-const CANONICAL_REPOSITORY = 'https://github.com/vovka/blog-engine.git';
+const CANONICAL_REPOSITORY = 'https://github.com/geek-blog/blog-engine.git';
 const SHA_PATTERN = /^[0-9a-f]{40}$/;
 const [command = 'doctor', ...args] = process.argv.slice(2);
 const projectRoot = process.cwd();
