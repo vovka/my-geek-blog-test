@@ -57,6 +57,8 @@ The following diagram shows the process at a high level. Blue nodes are explicit
 
 ```mermaid
 flowchart LR
+    accTitle: Human-governed AI software development lifecycle
+    accDescr: Twelve stages move left to right from customer conversation to production, with human review and feedback loops.
     C[1. Customer conversation]:::human --> T[2. Transcribe and structure]:::ai
     T --> H1[3. Human review and prioritization]:::human
     H1 --> A[4. Architecture mapping]:::shared
@@ -156,6 +158,8 @@ For example, suppose the current system looks like this:
 
 ```mermaid
 flowchart TD
+    accTitle: Baseline service architecture
+    accDescr: The web UI calls a public API that branches to auth and ordering, with orders stored in the orders database.
     UI[Web UI] --> API[Public API]
     API --> AUTH[Auth Service]
     API --> ORDER[Order Service]
@@ -166,6 +170,8 @@ A new recommendation feature could be proposed as a highlighted change to the sa
 
 ```mermaid
 flowchart TD
+    accTitle: Proposed recommendation-service architecture
+    accDescr: The baseline adds a green recommendation service and recommendations database beside auth and ordering.
     UI[Web UI] --> API[Public API]
     API --> AUTH[Auth Service]
     API --> ORDER[Order Service]
@@ -253,6 +259,8 @@ The orchestration layer is also an abstraction. A company may use one strong mod
 
 ```mermaid
 flowchart TD
+    accTitle: Agent orchestration and pull-request workflow
+    accDescr: Parallel and sequential pull requests converge on tests, an agent review-and-fix loop, and human approval.
     PLAN[Approved implementation plan]:::artifact --> ORCH[Orchestrator agent]:::ai
 
     ORCH --> PA[Parallel workstream A]:::ai
@@ -329,6 +337,8 @@ The harness may also give agents access to reusable skills:
 
 ```mermaid
 flowchart TB
+    accTitle: Development harness integrations
+    accDescr: A shared harness governs agents, delivery platforms, browser automation, observability, and example tools.
     subgraph H[Development harness]
         RULES[Constitutions and rules]
         GUARDS[Guardrails and constraints]
@@ -542,6 +552,8 @@ The last item will usually remain the largest cost. Token cost matters, but the 
 
 ```mermaid
 flowchart LR
+    accTitle: Feature cost model
+    accDescr: Fixed, model, variable, and human costs flow into the total estimated cost per feature or day.
     FIXED[Fixed and semi-fixed costs
 Seats
 Harness maintenance
