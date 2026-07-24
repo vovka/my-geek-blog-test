@@ -53,7 +53,6 @@ The lifecycle should remain stable even when the agents, models, orchestration t
 
 The following diagram shows the process at a high level. Blue nodes are explicit human checkpoints. Green nodes are AI-owned execution stages. Architecture mapping is prepared by AI but requires human approval before implementation proceeds.
 
-![Human-governed AI software development lifecycle](/images/human-governed-ai-software-development-lifecycle/lifecycle-model.svg)
 
 ```mermaid
 flowchart LR
@@ -152,7 +151,6 @@ For a brownfield project, these architectural artifacts should already exist.
 
 Instead of rediscovering the architecture from the codebase for every new task, the team identifies which parts of the existing architecture must change.
 
-![Architecture baseline and proposed change](/images/human-governed-ai-software-development-lifecycle/architecture-mapping.svg)
 
 For example, suppose the current system looks like this:
 
@@ -255,7 +253,6 @@ Implementation does not have to start immediately. The team can create the plan 
 
 The orchestration layer is also an abstraction. A company may use one strong model as a central orchestrator, allow engineers to launch agents manually, or use a custom internal service.
 
-![Planning, orchestration, and agentic review](/images/human-governed-ai-software-development-lifecycle/planning-orchestration-agentic-review.svg)
 
 ```mermaid
 flowchart TD
@@ -306,7 +303,6 @@ Every engineering organization should provide a development harness that defines
 
 The harness is the combination of instructions, tools, skills, hooks, policies, templates, checks, and guardrails available to every agent.
 
-![Development harness and pluggable abstractions](/images/human-governed-ai-software-development-lifecycle/development-harness-pluggable-abstractions.svg)
 
 It may include project-specific rules such as:
 
@@ -548,7 +544,6 @@ The cost is formed from several different layers:
 
 The last item will usually remain the largest cost. Token cost matters, but the meaningful metric is not cost per token. It is **cost per accepted feature**.
 
-![Cost estimation framework for an AI software factory](/images/human-governed-ai-software-development-lifecycle/cost-estimation-framework.svg)
 
 ```mermaid
 flowchart LR
