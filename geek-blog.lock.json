@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "engine": {
-    "repository": "https://github.com/vovka/blog-engine.git",
-    "commit": "7a11e9c125c81d3de9d9d72ea87df36f22d5bc24",
+    "repository": "https://github.com/geek-blog/blog-engine.git",
+    "commit": "c763f0b8031dd4a52e3fd1962cdf5e18a47022a4",
     "package": "blog-engine",
     "commands": [
       "setup",
