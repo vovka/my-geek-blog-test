@@ -38,6 +38,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Set up the pinned workspace
+        run: npm run setup
+      - name: Configure Chrome sandbox
+        run: |
+          sandbox_path="$(find "$HOME/.cache/puppeteer" -type f -name chrome_sandbox -print -quit)"
+          test -n "$sandbox_path"
+          sudo cp -p "$sandbox_path" /usr/local/sbin/chrome-devel-sandbox
+          sudo chown root:root /usr/local/sbin/chrome-devel-sandbox
+          sudo chmod 4755 /usr/local/sbin/chrome-devel-sandbox
+          echo "CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox" >> "$GITHUB_ENV"
       - name: Build through the pinned workspace
         run: npm run build
       - uses: actions/configure-pages@v5
