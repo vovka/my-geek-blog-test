@@ -241,6 +241,8 @@ Some changes may need to happen sequentially. One pull request may introduce a f
 
 Other changes may be independent. Several agents can work on them in parallel and create separate branches and pull requests.
 
+<!-- it would be great here to illustrate possible branching approaches -->
+
 The plan should therefore describe not only what must be changed, but also:
 
 - which tasks can run in parallel;
