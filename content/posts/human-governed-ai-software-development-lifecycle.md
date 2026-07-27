@@ -14,6 +14,12 @@ tags:
   - software factory
 ---
 
+> ## TL;DR
+>
+> AI agents can execute most of the software delivery process: transcribing customer conversations, structuring requirements, preparing architecture proposals, planning work, implementing changes, running real-world tests, reviewing pull requests, and deploying releases. Humans should remain at the control points where business intent, architectural direction, risk acceptance, final validation, and accountability matter.
+>
+> The result is not a single coding agent but a **human-governed software factory**: a replaceable set of tools and agents operating inside a shared development harness, with traceable artifacts and explicit human approval gates from the original conversation to production.
+
 AI-assisted development is usually discussed at the level of individual coding tools. We compare Claude Code, Codex, Copilot, Devin, and other agents. We ask which model writes better code, which one understands a repository better, or which one can finish a task with fewer prompts.
 
 I think this perspective is too narrow.
