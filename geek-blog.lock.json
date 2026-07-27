@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "engine": {
     "repository": "https://github.com/geek-blog/blog-engine.git",
-    "commit": "ac72feab38a6ed53dbf104c39015d1fba4b700fc",
+    "commit": "75864cbf89628f6f7aa75ffd7f7fd2a9d4b08bca",
     "package": "blog-engine",
     "commands": [
       "setup",
