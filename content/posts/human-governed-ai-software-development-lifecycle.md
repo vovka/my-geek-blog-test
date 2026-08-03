@@ -581,16 +581,24 @@ Release responsibility] --> TOTAL
 
 ### Current reference prices
 
-The following prices were checked on July 23, 2026:
+The following prices were checked on August 4, 2026:
+
+| Component | Fresh input | Cached-input read | Output |
+|---|---:|---:|---:|
+| OpenAI GPT-5.6 Sol, current flagship | $5.00 / 1M | $0.50 / 1M | $30.00 / 1M |
+| OpenAI GPT-5.6 Terra, balanced workhorse | $2.50 / 1M | $0.25 / 1M | $15.00 / 1M |
+| Anthropic Claude Fable 5, current generally available flagship | $10.00 / 1M | $1.00 / 1M | $50.00 / 1M |
+| Anthropic Claude Opus 4.8 | $5.00 / 1M | $0.50 / 1M | $25.00 / 1M |
+| Anthropic Claude Sonnet 5, introductory price through August 31, 2026 | $2.00 / 1M | $0.20 / 1M | $10.00 / 1M |
+| Anthropic Claude Sonnet 5, standard price after the introductory period | $3.00 / 1M | $0.30 / 1M | $15.00 / 1M |
+
+The Claude cached-input figures apply Anthropic's 90% prompt-cache read discount. Cache creation is billed separately and is not included in the examples below. OpenAI also bills cache writes separately. The calculations assume that the stated cached tokens are successful cache reads and that no individual request triggers premium long-context pricing.
+
+Other relevant platform prices remain:
 
 | Component | Price |
 |---|---:|
-| Claude Sonnet 5 API, input | $2 per 1M tokens through August 31, 2026 |
-| Claude Sonnet 5 API, output | $10 per 1M tokens through August 31, 2026 |
-| Claude Sonnet 5 standard price after the introductory period | $3 input / $15 output per 1M tokens |
-| Claude Opus 4.8 API | $5 input / $25 output per 1M tokens |
-| GPT-5.3-Codex API | $1.75 input / $0.175 cached input / $14 output per 1M tokens |
-| ChatGPT Business | $25 per user monthly or $20 per user monthly when billed annually |
+| ChatGPT Business | $25 per user monthly or $20 per user monthly when billed annually, minimum two users |
 | Anthropic Team | $30 per user monthly or $25 per user monthly when billed annually, minimum five users |
 | GitHub Actions Linux 2-core runner | $0.006 per minute after included allowances |
 
@@ -612,27 +620,31 @@ Assume that one medium feature requires:
 - approximately 22 million cached input tokens;
 - approximately 950,000 output tokens.
 
-Using GPT-5.3-Codex for the entire workload:
+Applying exactly the same usage shape to each model gives:
 
-- fresh input: 4.6M × $1.75 = **$8.05**;
-- cached input: 22M × $0.175 = **$3.85**;
-- output: 0.95M × $14 = **$13.30**;
-- model total: **$25.20**;
-- 600 Linux CI minutes: **$3.60**.
+| Configuration | Fresh input | Cached reads | Output | Model total | Model + CI |
+|---|---:|---:|---:|---:|---:|
+| GPT-5.6 Sol for everything | $23.00 | $11.00 | $28.50 | **$62.50** | **$66.10** |
+| Claude Fable 5 for everything | $46.00 | $22.00 | $47.50 | **$115.50** | **$119.10** |
+| GPT-5.6 Terra for everything | $11.50 | $5.50 | $14.25 | **$31.25** | **$34.85** |
+| Claude Sonnet 5 for everything, introductory price | $9.20 | $4.40 | $9.50 | **$23.10** | **$26.70** |
+| Claude Sonnet 5 for everything, standard price | $13.80 | $6.60 | $14.25 | **$34.65** | **$38.25** |
 
-That gives approximately **$28.80** in direct model and CI charges before staging, storage, monitoring, seats, and human time.
+The **$3.60** CI component is 600 Linux minutes at $0.006 per minute. These totals exclude staging, storage, monitoring, subscription seats, cache-write charges, paid tool calls, and human time.
 
-A Claude configuration could use Sonnet 5 for coding and review, with Opus 4.8 reserved for architecture or orchestration. Under a similar usage shape, a realistic direct model cost would often be in the same broad range—roughly **$25–40** for the active feature day at the introductory Sonnet 5 price.
+Running every step on a flagship model is easy to estimate but rarely economical. A practical factory would normally reserve GPT-5.6 Sol or Claude Fable 5 for architecture, difficult planning, escalation, and final review, while assigning routine implementation and review loops to GPT-5.6 Terra, Claude Sonnet 5, or cheaper specialized models.
 
 A useful planning range is therefore:
 
-- simple change: **$5–20** in direct AI and execution cost;
-- medium multi-agent feature: **$30–60**;
-- difficult feature with repeated failed attempts, large context, frontier orchestration, and extensive browser testing: **$100–300 or more**.
+- simple change: **$5–25** in direct AI and execution cost;
+- medium multi-agent feature with workhorse models: **$25–50**;
+- medium feature run entirely on current flagship models: approximately **$65–120**;
+- difficult feature with repeated failed attempts, large context, frontier orchestration, and extensive browser testing: **$150–500 or more**.
 
-These are not fixed prices. Repository size, cache effectiveness, output volume, reasoning effort, failed attempts, parallelism, and review depth can change the result by an order of magnitude.
+These are not fixed prices. Repository size, cache effectiveness, cache creation, output volume, reasoning effort, failed attempts, parallelism, long-context premiums, and review depth can change the result by an order of magnitude.
 
 The factory should be evaluated against the human time and accepted output it produces. Spending $50 on agents is expensive if it creates code that cannot be trusted. It is extremely cheap if it replaces several days of routine execution while preserving human architectural control.
+
 
 ## The human remains accountable
 
@@ -701,8 +713,11 @@ That is the transition I believe we are beginning to see.
 
 ## Pricing sources
 
-- [Anthropic: Introducing Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5)
+- [OpenAI: GPT-5.6 Sol API model](https://developers.openai.com/api/docs/models/gpt-5.6-sol)
+- [OpenAI: GPT-5.6 Terra API model](https://developers.openai.com/api/docs/models/gpt-5.6-terra)
+- [OpenAI: ChatGPT Business billing and seats](https://help.openai.com/en/articles/8792828-what-is-chatgpt-business)
+- [Anthropic: Claude Fable 5](https://www.anthropic.com/claude/fable)
+- [Anthropic: Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)
+- [Anthropic: Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5)
 - [Anthropic pricing](https://www.anthropic.com/pricing)
-- [OpenAI: GPT-5.3-Codex API model](https://developers.openai.com/api/docs/models/gpt-5.3-codex)
-- [OpenAI: ChatGPT Business billing and seats](https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business-4)
 - [GitHub Actions billing](https://docs.github.com/en/billing/concepts/product-billing/github-actions)
