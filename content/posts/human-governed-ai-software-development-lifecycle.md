@@ -239,7 +239,11 @@ From the beginning, it should consider how the task can be divided between multi
 
 Some changes may need to happen sequentially. One pull request may introduce a foundation required by the next pull request. This can produce a stack of dependent pull requests.
 
+GitHub has recently introduced [native support for stacked pull requests](https://github.github.com/gh-stack/), currently in private preview. Its pull-request UI and `gh stack` CLI help authors and reviewers create, navigate, rebase, and merge dependent pull requests while preserving review and CI context. This is particularly relevant to agentic workflows, where a large feature can be decomposed into a sequence of small, independently reviewable changes.
+
 Other changes may be independent. Several agents can work on them in parallel and create separate branches and pull requests.
+
+<!-- it would be great here to illustrate possible branching approaches -->
 
 The plan should therefore describe not only what must be changed, but also:
 
