@@ -243,8 +243,6 @@ GitHub has recently introduced [native support for stacked pull requests](https:
 
 Other changes may be independent. Several agents can work on them in parallel and create separate branches and pull requests.
 
-<!-- it would be great here to illustrate possible branching approaches -->
-
 The plan should therefore describe not only what must be changed, but also:
 
 - which tasks can run in parallel;
