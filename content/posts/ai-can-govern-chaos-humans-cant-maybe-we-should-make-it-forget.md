@@ -4,7 +4,7 @@ date: "2026-08-17"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "What if enormous context windows are one reason AI-generated software is so hard for humans to understand?"
-coverImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85"
+coverImage: "https://images.unsplash.com/photo-1677128354832-b33563cd7c4d?auto=format&fit=crop&w=1600&q=85"
 tags:
   - LLMs
   - context windows
@@ -35,6 +35,8 @@ The funny part is that the solution often works. The AI did the job faster than 
 
 The bottleneck moved. Producing the software became cheap. Understanding the software did not.
 
+![AI makes software production cheap, while human understanding remains expensive](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/1.png)
+
 I have been wondering whether this has something to do with a basic difference between the way humans and LLMs deal with information.
 
 ## Humans cannot keep much in their heads
@@ -42,6 +44,8 @@ I have been wondering whether this has something to do with a basic difference b
 There is an old and famous idea in psychology called the ["magical number seven, plus or minus two"](https://doi.org/10.1037/h0043158). George Miller discussed it in 1956 while studying limits in human information processing. Later research questioned whether seven is really the right number. [Nelson Cowan, for example, argued that under stricter conditions the central capacity is closer to four chunks](https://doi.org/10.1017/S0140525X01003922).
 
 For what I am thinking about here, the exact number does not matter very much. Seven, four, maybe something else depending on the task. The important part is that it is small.
+
+![A human can actively work with only a few pieces of information while the full system is much larger](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/2.png)
 
 I cannot hold 500 classes, 2,000 methods, database schemas, queues, APIs, and thousands of dependencies in my active attention at the same time.
 
@@ -71,6 +75,8 @@ Billing
 ```
 
 Then I can open Payments and repeat the same trick.
+
+![Humans divide a complex system into chunks and progressively focus on smaller parts](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/3.png)
 
 This is such a normal part of software engineering that I rarely thought about why we do it. We call it architecture, decomposition, modularity, separation of concerns, encapsulation. But all of these ideas have something in common: they let us hide most of the system while thinking about a small part of it.
 
@@ -108,6 +114,8 @@ Or, to put it another way:
 
 Humans cannot govern chaos. An LLM increasingly can.
 
+![A human struggles with a few active items while an LLM can operate across a much larger chaotic information space](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/4.png)
+
 That may be a problem when the machine produces something that a human must maintain.
 
 ## I see this problem in AI-generated software
@@ -117,6 +125,8 @@ I have struggled with this for months.
 AI-generated solutions can be surprisingly good and surprisingly difficult to understand at the same time. The code works. Tests pass. Edge cases are covered. There may even be documentation everywhere.
 
 Yet when I need to answer a basic question such as "where does this responsibility actually live?", I sometimes have to investigate the solution almost as if it had been written by another team.
+
+![A developer tracing many files and dependencies to discover where a responsibility such as authentication actually lives](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/5.png)
 
 There is now some empirical work showing a related effect. A 2026 study called [AI-Generated Smells: An Analysis of Code and Architecture in LLM and Agent-Driven Development](https://arxiv.org/abs/2605.02741) examined technical debt in AI-generated software. The authors found that more capable models often generated larger and more coupled implementations, and they argue that architectural complexity management is becoming an important problem for AI-driven software engineering.
 
@@ -135,6 +145,8 @@ Sometimes the agent follows the architecture closely. Sometimes it gets creative
 The useful thing is not that I know every line of generated code. I don't, and I no longer try to.
 
 The useful thing is that I have a map.
+
+![A simple architecture map sits above a large mass of generated code and lets a human navigate the system](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/6.png)
 
 If something is wrong with authentication, I roughly know where authentication should be. If I need to change persistence, I know which part of the architecture owns it. I can move through the hierarchy and eventually reach the generated code I care about.
 
@@ -156,6 +168,8 @@ What if, for some jobs, we deliberately go in the opposite direction?
 
 Take a model that can handle a huge context window and give it only 16K.
 
+![A huge LLM context window is deliberately restricted to a much smaller effective 16K context](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/7.png)
+
 Not because that is all the model supports. Because that is all we allow it to use.
 
 There is another detail that I think matters even more: tell the model about the limit.
@@ -167,6 +181,8 @@ Effective context budget: 16,384 tokens
 Currently used: 12,941 tokens
 Remaining: 3,443 tokens
 ```
+
+![An AI agent sees its remaining context budget and decides what information to keep, summarize, or archive](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/9.png)
 
 Now the agent has a resource problem.
 
@@ -202,6 +218,8 @@ hierarchy
 architecture
 ```
 
+![Memory pressure transforms too much information into chunks, abstractions, hierarchy, and architecture](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/8.png)
+
 I do not know if this is true. That is exactly why I want to test it.
 
 ## There are some interesting hints in existing research
@@ -234,6 +252,8 @@ Main goal
 └── future subgoal
 ```
 
+![Hierarchical agent memory collapses completed subgoals into summaries while keeping the current subgoal expanded](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/11.png)
+
 There is also evidence that simply having more context is not always helpful.
 
 The 2025 paper [Context Length Alone Hurts LLM Performance Despite Perfect Retrieval](https://arxiv.org/abs/2510.05381) tested five open and closed models on math, question answering, and coding. Performance degraded by 13.9% to 85% as input length increased, even though the relevant information was still retrievable. The authors also tested variants designed to remove ordinary distraction effects, and the degradation did not disappear.
@@ -247,6 +267,8 @@ At first I thought I could test my idea simply by truncating the conversation. T
 If old information silently disappears, the LLM is not adapting to a restriction. It is just losing information.
 
 For my hypothesis, the model needs to experience the budget as a constraint.
+
+![A context-aware agent monitors memory usage and actively chooses what to keep, summarize, and archive](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/12.png)
 
 This is another place where recent work is useful.
 
@@ -306,7 +328,11 @@ Condition C is more interesting. It tells me whether awareness of scarcity chang
 
 Condition D is probably the closest analogue to how humans actually work. Our active memory is tiny, but we use notebooks, diagrams, documents, source code, naming conventions, and other external storage all the time.
 
+![Four experiment conditions compare full context, restricted context, context awareness, and external memory](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/10.png)
+
 Then I give all four agents the same tasks and compare what they build.
+
+![The same software task is given to four agents with different context constraints to compare the resulting code structures](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/13.png)
 
 Of course I can measure whether the software works. Tests passed, task completion, regressions, and so on.
 
@@ -327,6 +353,8 @@ Give an engineer a generated project and ask a few practical questions:
 «What depends on this subsystem?»
 
 «If this interface changes, what else is affected?»
+
+![Human comprehensibility is measured by how quickly and accurately an engineer can answer questions about a generated system](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/14.png)
 
 Then measure the time and accuracy.
 
@@ -349,6 +377,8 @@ Maybe one reason their output feels alien is not that they are bad at architectu
 And if humans are still expected to supervise, maintain, modify, and ultimately take responsibility for the systems AI produces, then optimizing only for machine comprehension may be the wrong target.
 
 Perhaps one way to make AI think more legibly is surprisingly simple.
+
+![Constraining a huge context creates pressure to compress information into a cleaner hierarchy that humans can understand](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/15.png)
 
 Give it less room.
 
