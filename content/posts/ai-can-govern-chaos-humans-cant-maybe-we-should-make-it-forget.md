@@ -38,7 +38,7 @@ I have been wondering whether this has something to do with a basic difference b
 
 ## Humans cannot keep much in their heads
 
-There is an old and famous idea in psychology called the <a href="https://doi.org/10.1037/h0043158" target="_blank" rel="noopener noreferrer">"magical number seven, plus or minus two"</a>. George Miller discussed it in 1956 while studying limits in human information processing. Later research questioned whether seven is really the right number. <a href="https://doi.org/10.1017/S0140525X01003922" target="_blank" rel="noopener noreferrer">Nelson Cowan, for example, argued that under stricter conditions the central capacity is closer to four chunks</a>.
+There is an old and famous idea in psychology called the ["magical number seven, plus or minus two"](https://doi.org/10.1037/h0043158). George Miller discussed it in 1956 while studying limits in human information processing. Later research questioned whether seven is really the right number. [Nelson Cowan, for example, argued that under stricter conditions the central capacity is closer to four chunks](https://doi.org/10.1017/S0140525X01003922).
 
 For what I am thinking about here, the exact number does not matter very much. Seven, four, maybe something else depending on the task. The important part is that it is small.
 
@@ -73,7 +73,7 @@ Then I can open Payments and repeat the same trick.
 
 This is such a normal part of software engineering that I rarely thought about why we do it. We call it architecture, decomposition, modularity, separation of concerns, encapsulation. But all of these ideas have something in common: they let us hide most of the system while thinking about a small part of it.
 
-Herbert Simon wrote about hierarchical and nearly decomposable systems in <a href="https://www.jstor.org/stable/985254" target="_blank" rel="noopener noreferrer">The Architecture of Complexity</a> back in 1962. <a href="https://doi.org/10.1145/361598.361623" target="_blank" rel="noopener noreferrer">David Parnas later made a similar point specifically about software</a>: good modularization improves flexibility and comprehensibility.
+Herbert Simon wrote about hierarchical and nearly decomposable systems in [The Architecture of Complexity](https://www.jstor.org/stable/985254) back in 1962. [David Parnas later made a similar point specifically about software](https://doi.org/10.1145/361598.361623): good modularization improves flexibility and comprehensibility.
 
 This made me look at software architecture from another angle.
 
@@ -117,7 +117,7 @@ AI-generated solutions can be surprisingly good and surprisingly difficult to un
 
 Yet when I need to answer a basic question such as "where does this responsibility actually live?", I sometimes have to investigate the solution almost as if it had been written by another team.
 
-There is now some empirical work showing a related effect. A 2026 study called <a href="https://arxiv.org/abs/2605.02741" target="_blank" rel="noopener noreferrer">AI-Generated Smells: An Analysis of Code and Architecture in LLM and Agent-Driven Development</a> examined technical debt in AI-generated software. The authors found that more capable models often generated larger and more coupled implementations, and they argue that architectural complexity management is becoming an important problem for AI-driven software engineering.
+There is now some empirical work showing a related effect. A 2026 study called [AI-Generated Smells: An Analysis of Code and Architecture in LLM and Agent-Driven Development](https://arxiv.org/abs/2605.02741) examined technical debt in AI-generated software. The authors found that more capable models often generated larger and more coupled implementations, and they argue that architectural complexity management is becoming an important problem for AI-driven software engineering.
 
 That paper does not prove my hypothesis about context windows. There are many other possible causes. Models may simply be optimized for functional success rather than human comprehension. Training data matters. Prompts matter. Agent scaffolding matters. The lack of maintainability feedback matters.
 
@@ -209,11 +209,11 @@ I have not found a study that asks my exact question: if we deliberately restric
 
 But several areas of research make the idea less crazy than it first sounds.
 
-One is the <a href="https://arxiv.org/abs/2309.06629" target="_blank" rel="noopener noreferrer">relational bottleneck</a>. Work by Taylor Webb and colleagues studies neural systems where information flow is deliberately restricted so that downstream processing focuses on relations rather than carrying every property of every input. The restriction creates an inductive bias toward abstraction and systematic generalization.
+One is the [relational bottleneck](https://arxiv.org/abs/2309.06629). Work by Taylor Webb and colleagues studies neural systems where information flow is deliberately restricted so that downstream processing focuses on relations rather than carrying every property of every input. The restriction creates an inductive bias toward abstraction and systematic generalization.
 
 The implementation is different from what I am proposing, but I like the underlying principle: what a system is prevented from carrying forward can change the representation it learns to use.
 
-There is an older parallel in research on the evolution of language. <a href="https://doi.org/10.1073/pnas.0707835105" target="_blank" rel="noopener noreferrer">Simon Kirby, Hannah Cornish, and Kenny Smith ran experiments where artificial languages were repeatedly learned and transmitted by human participants</a>. Through this transmission process, initially unstructured languages developed more systematic structure. Their work is part of a larger line of research connecting transmission bottlenecks and compression pressure with the emergence of learnable structure.
+There is an older parallel in research on the evolution of language. [Simon Kirby, Hannah Cornish, and Kenny Smith ran experiments where artificial languages were repeatedly learned and transmitted by human participants](https://doi.org/10.1073/pnas.0707835105). Through this transmission process, initially unstructured languages developed more systematic structure. Their work is part of a larger line of research connecting transmission bottlenecks and compression pressure with the emergence of learnable structure.
 
 Again, this is not about LLM context windows. I am interested in the recurring shape of the mechanism: when arbitrary complexity is expensive to preserve, structure becomes useful.
 
@@ -221,7 +221,7 @@ Again, this is not about LLM context windows. I am interested in the recurring s
 
 Recent agent research is much closer to the experiment I have in mind.
 
-<a href="https://aclanthology.org/2025.acl-long.1575/" target="_blank" rel="noopener noreferrer">HiAgent</a> treats working memory hierarchically. Instead of keeping a long flat history of every action and observation, the agent works through subgoals. Completed parts can be summarized while detailed information for the active subgoal remains available. In experiments across five long-horizon tasks, the authors reported a twofold increase in success rate and 3.8 fewer steps on average.
+[HiAgent](https://aclanthology.org/2025.acl-long.1575/) treats working memory hierarchically. Instead of keeping a long flat history of every action and observation, the agent works through subgoals. Completed parts can be summarized while detailed information for the active subgoal remains available. In experiments across five long-horizon tasks, the authors reported a twofold increase in success rate and 3.8 fewer steps on average.
 
 The resulting memory looks a lot like the way I would manually structure a difficult project:
 
@@ -235,7 +235,7 @@ Main goal
 
 There is also evidence that simply having more context is not always helpful.
 
-The 2025 paper <a href="https://arxiv.org/abs/2510.05381" target="_blank" rel="noopener noreferrer">Context Length Alone Hurts LLM Performance Despite Perfect Retrieval</a> tested five open and closed models on math, question answering, and coding. Performance degraded by 13.9% to 85% as input length increased, even though the relevant information was still retrievable. The authors also tested variants designed to remove ordinary distraction effects, and the degradation did not disappear.
+The 2025 paper [Context Length Alone Hurts LLM Performance Despite Perfect Retrieval](https://arxiv.org/abs/2510.05381) tested five open and closed models on math, question answering, and coding. Performance degraded by 13.9% to 85% as input length increased, even though the relevant information was still retrievable. The authors also tested variants designed to remove ordinary distraction effects, and the degradation did not disappear.
 
 So "the model supports a huge context window" and "the model reasons equally well across that entire window" are not the same statement.
 
@@ -249,7 +249,7 @@ For my hypothesis, the model needs to experience the budget as a constraint.
 
 This is another place where recent work is useful.
 
-<a href="https://arxiv.org/abs/2604.01664" target="_blank" rel="noopener noreferrer">ContextBudget</a>, published as a 2026 preprint, treats context management as a decision problem with an explicit budget. The agent can assess how much context remains and decide when and how aggressively to compress its history. The learned strategies performed better than comparison methods as context pressure increased.
+[ContextBudget](https://arxiv.org/abs/2604.01664), published as a 2026 preprint, treats context management as a decision problem with an explicit budget. The agent can assess how much context remains and decide when and how aggressively to compress its history. The learned strategies performed better than comparison methods as context pressure increased.
 
 VISTA takes a related approach without retraining the underlying model. It gives an agent a dashboard describing the state of its own context, including token usage, recency, archive state, and budget. The agent can archive information and recover it later. The authors found that exposing this information improved context management and that the benefit became larger under greater context pressure. They also tested whether models could estimate their own context state without the dashboard and found large errors.
 
