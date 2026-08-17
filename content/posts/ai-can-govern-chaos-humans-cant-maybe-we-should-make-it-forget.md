@@ -252,7 +252,7 @@ Main goal
 └── future subgoal
 ```
 
-![Hierarchical agent memory collapses completed subgoals into summaries while keeping the current subgoal expanded](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/11.png?raw=true)
+![Hierarchical agent memory collapses completed subgoals into summaries while keeping the current subgoal expanded](https://github.com/vovka/my-geek-blog-test/blob/24e31b086aaf108d6c353b076a6dc63638788708/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/11.png?raw=true)
 
 There is also evidence that simply having more context is not always helpful.
 
@@ -268,7 +268,7 @@ If old information silently disappears, the LLM is not adapting to a restriction
 
 For my hypothesis, the model needs to experience the budget as a constraint.
 
-![A context-aware agent monitors memory usage and actively chooses what to keep, summarize, and archive](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/12.png?raw=true)
+![A context-aware agent monitors memory usage and actively chooses what to keep, summarize, and archive](https://github.com/vovka/my-geek-blog-test/blob/24e31b086aaf108d6c353b076a6dc63638788708/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/12.png?raw=true)
 
 This is another place where recent work is useful.
 
@@ -332,7 +332,7 @@ Condition D is probably the closest analogue to how humans actually work. Our ac
 
 Then I give all four agents the same tasks and compare what they build.
 
-![The same software task is given to four agents with different context constraints to compare the resulting code structures](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/13.png?raw=true)
+![The same software task is given to four agents with different context constraints to compare the resulting code structures](https://github.com/vovka/my-geek-blog-test/blob/24e31b086aaf108d6c353b076a6dc63638788708/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/13.png?raw=true)
 
 Of course I can measure whether the software works. Tests passed, task completion, regressions, and so on.
 
@@ -354,7 +354,7 @@ Give an engineer a generated project and ask a few practical questions:
 
 «If this interface changes, what else is affected?»
 
-![Human comprehensibility is measured by how quickly and accurately an engineer can answer questions about a generated system](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/14.png?raw=true)
+![Human comprehensibility is measured by how quickly and accurately an engineer can answer questions about a generated system](https://github.com/vovka/my-geek-blog-test/blob/24e31b086aaf108d6c353b076a6dc63638788708/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/14.png?raw=true)
 
 Then measure the time and accuracy.
 
@@ -378,7 +378,7 @@ And if humans are still expected to supervise, maintain, modify, and ultimately 
 
 Perhaps one way to make AI think more legibly is surprisingly simple.
 
-![Constraining a huge context creates pressure to compress information into a cleaner hierarchy that humans can understand](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/15.png?raw=true)
+![Constraining a huge context creates pressure to compress information into a cleaner hierarchy that humans can understand](https://github.com/vovka/my-geek-blog-test/blob/24e31b086aaf108d6c353b076a6dc63638788708/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/15.png?raw=true)
 
 Give it less room.
 
