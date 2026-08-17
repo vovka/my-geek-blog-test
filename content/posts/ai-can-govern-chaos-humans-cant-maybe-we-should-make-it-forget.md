@@ -35,8 +35,7 @@ The funny part is that the solution often works. The AI did the job faster than 
 
 The bottleneck moved. Producing the software became cheap. Understanding the software did not.
 
-![AI makes software production cheap, while human understanding remains expensive](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/1.png
-https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/1.png?raw=true)
+![AI makes software production cheap, while human understanding remains expensive](https://github.com/vovka/my-geek-blog-test/blob/28efc98370a7fa6463ef6cfbc30f8ec1e5bb1c94/public/images/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget/1.png?raw=true)
 
 I have been wondering whether this has something to do with a basic difference between the way humans and LLMs deal with information.
 
