@@ -12,6 +12,7 @@ tags:
   - AI-assisted development
   - working memory
   - cognitive science
+comments: true
 ---
 
 *What if enormous context windows are one reason AI-generated software is so hard for humans to understand?*
