@@ -4,7 +4,7 @@ date: "2026-09-22"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "My 2026 job search became an automated funnel: agents find and filter jobs, prepare tailored applications, and leave me with a few human decisions."
-coverImage: "/images/job-searching-2026/funnel.webp"
+coverImage: "/images/job-searching-2026/funnel.svg"
 tags:
   - AI agents
   - job search
@@ -21,7 +21,7 @@ Candidates use AI agents to find tons of jobs, adapt CVs, write cover letters, a
 
 It increasingly looks like a battle between AI agents. Somewhere between the two funnels are two humans trying to find each other.
 
-![My job-search funnel on the left and the employer's filtering funnel on the right.](/images/job-searching-2026/funnel.webp)
+![My job-search funnel on the left and the employer's filtering funnel on the right.](/images/job-searching-2026/funnel.svg)
 
 ## The market
 
@@ -43,7 +43,7 @@ The remaining jobs appear in Telegram.
 
 The first mode is `/hinder` — Hiring Tinder. It shows one job at a time with **No**, **Maybe**, and **Yes** buttons. This is my triage.
 
-![The Hinder view: one job card and three decisions.](/images/job-searching-2026/hinder.webp)
+![The Hinder view: one job card and three decisions.](/images/job-searching-2026/hinder.svg)
 
 When I press **Yes**, the job moves to the shortlist. Agents prepare the application package: a cover letter, answers to application questions, and a CV assembled for that specific position. The CV is rendered to PDF and reviewed before it reaches me.
 
