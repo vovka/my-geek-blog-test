@@ -4,7 +4,7 @@ date: "2026-09-22"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "My 2026 job search became an automated funnel: agents find and filter jobs, prepare tailored applications, and leave me with a few human decisions."
-coverImage: "/images/job-searching-2026/funnel.svg"
+coverImage: "https://images.pexels.com/photos/590044/pexels-photo-590044.jpeg?cs=srgb&dl=pexels-goumbik-590044.jpg&fm=jpg"
 tags:
   - AI agents
   - job search
