@@ -11,6 +11,7 @@ tags:
   - automation
   - software engineering
   - JobPilot
+comments: true
 ---
 
 ## TL;DR
@@ -21,7 +22,7 @@ Candidates use AI agents to find tons of jobs, adapt CVs, write cover letters, a
 
 It increasingly looks like a battle between AI agents. Somewhere between the two funnels are two humans trying to find each other.
 
-![My job-search funnel on the left and the employer's filtering funnel on the right.](/images/job-searching-2026/funnel.svg)
+![My job-search funnel on the left and the employer's filtering funnel on the right.](/images/job-searching-2026/1f2eb2f7-90bd-4848-95ec-5a57edf49ba4.png)
 
 ## The market
 
@@ -43,7 +44,7 @@ The remaining jobs appear in Telegram.
 
 The first mode is `/hinder` — Hiring Tinder. It shows one job at a time with **No**, **Maybe**, and **Yes** buttons. This is my triage.
 
-![The Hinder view: one job card and three decisions.](/images/job-searching-2026/hinder.svg)
+![The Hinder view: one job card and three decisions.](/images/job-searching-2026/84d7319e-ed5e-44ef-8bb5-cacebbef4292.png)
 
 When I press **Yes**, the job moves to the shortlist. Agents prepare the application package: a cover letter, answers to application questions, and a CV assembled for that specific position. The CV is rendered to PDF and reviewed before it reaches me.
 
@@ -53,7 +54,7 @@ So most of my part has become two decisions: *Is this job interesting?* and *Is 
 
 Meanwhile the search keeps running. I can spend that time with my son, cook, or work on another software toy instead of repeatedly refreshing job boards.
 
-![What I do while the job-search pipeline keeps running.](/images/job-searching-2026/free-time.webp)
+![What I do while the job-search pipeline keeps running.](/images/job-searching-2026/f4f337f8-0f91-4371-847c-8a4429063fa5.png)
 
 ## My career as a Markdown file
 
