@@ -171,6 +171,12 @@ The same four processes now look like this:
 
 With spaces instead of rain, the percentages line up as a plain table, one column per process. Every example is a dot: green when it passed, red when it failed, yellow when it is pending. The colors come from the defaults, so only the symbols had to change. Failures are much easier to spot than a red katakana in green rain. The final report is unchanged.
 
+Going the other way, for a true Matrix experience you can, for example, configure this:
+
+![The formatter reconfigured with a shade of green per process](/images/parallel-matrix-formatter/config-process-colors.gif)
+
+Here every process gets its own shade of green, from the lightest for the first process to the darkest for the last. Each example symbol takes the shade of the process that ran it, and so does that process's percentage in the progress line. You can tell which column an example belongs to by its color. Since color now marks the process instead of the status, failed and pending examples get their own shapes, a crossed box ☒ and an empty box ☐, which stand out against the katakana in any shade.
+
 Colors, symbols, column width, update policy, progress-line format, digit substitution, and output suppression can all be changed through YAML. Only the keys you change need to be listed; everything else keeps its default.
 
 The formatter also works with ordinary single-process RSpec:
