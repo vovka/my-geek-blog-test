@@ -151,25 +151,25 @@ A process leaving is not the same as its messages arriving.
 
 The Matrix theme is the default, but most of its pieces are configurable.
 
-For example, the status characters can be replaced with ordinary emoji, and the progress line can be printed on progress instead of on a timer. Put this into `config/parallel_matrix_formatter.yml`:
+For example, the Matrix can be switched off for a quieter look. Put this into `config/parallel_matrix_formatter.yml`:
 
 ```yaml
-progress_update:
-  interval_seconds: 0
-  percent_threshold: 10
+progress_line:
+  column:
+    pad_symbols: " "
 
 example_status:
   symbols:
-    passed: "🟢"
-    failed: "🔴"
-    pending: "🟡"
+    passed: "•"
+    failed: "•"
+    pending: "•"
 ```
 
 The same four processes now look like this:
 
-![The formatter reconfigured with emoji symbols and a 10% progress threshold](/images/parallel-matrix-formatter/config-emoji.gif)
+![The formatter reconfigured with plain padding and fixed status dots](/images/parallel-matrix-formatter/config-clean.gif)
 
-Passed examples are green circles, failures red, pending yellow. `interval_seconds: 0` turns off the once-a-minute timer, so a new progress line starts whenever any process moves another 10%. With four processes that happens often, which is why many rows hold only a few symbols. The final report is unchanged.
+With spaces instead of rain, the percentages line up as a plain table, one column per process. Every example is a dot: green when it passed, red when it failed, yellow when it is pending. The colors come from the defaults, so only the symbols had to change. Failures are much easier to spot than a red katakana in green rain. The final report is unchanged.
 
 Colors, symbols, column width, update policy, progress-line format, digit substitution, and output suppression can all be changed through YAML. Only the keys you change need to be listed; everything else keeps its default.
 
