@@ -28,6 +28,8 @@ In 2026, I think software engineering moved another step forward. The interestin
 
 Business is approximately one step behind. Today companies are experimenting with automation of separate workflows.
 
+![Timeline of AI adoption: each business stage repeats the software engineering stage from the previous year](/images/software-engineering-in-2027/one-year-gap.svg)
+
 If this one-year gap continues, 2027 should be the year when businesses start connecting these isolated automations into complete systems.
 
 Instead of automating one task, they will build orchestrated, multi-stage pipelines that handle large parts of routine business operations. Humans, especially owners and senior management, will move further toward deciding what should happen while automated systems handle more of how it happens.
@@ -46,6 +48,8 @@ The other group kept its engineering expertise and concentrated on making engine
 
 My guess is that these two approaches will produce very different results in 2027.
 
+![Two company strategies: replacing engineers with AI leads to a complexity ceiling, automating the SDLC around engineers leads to a software factory](/images/software-engineering-in-2027/two-paths.svg)
+
 The first group will probably hit a complexity ceiling.
 
 AI can generate a surprising amount of working software. The problem appears later. Each new feature adds another layer of behavior, dependencies, infrastructure, database state, integrations, exceptions, and historical decisions.
@@ -57,6 +61,8 @@ At that point AI itself can still make changes, but the human has difficulty che
 This is where "AI can write the code" stops being the interesting question.
 
 The question becomes whether anyone still understands the resulting system well enough to maintain it.
+
+![System complexity grows with every AI-generated feature while the owner's understanding stays flat; the crossing point is the complexity ceiling](/images/software-engineering-in-2027/complexity-ceiling.svg)
 
 I expect 2026 to leave behind quite a lot of AI-generated slop: applications that work well enough today but whose owners will discover that they cannot safely extend or maintain them.
 
@@ -77,6 +83,8 @@ A requirement enters the system. Agents analyze the existing architecture. Anoth
 This starts looking less like an engineer using an AI assistant and more like a factory producing software.
 
 I call these systems AI software factories.
+
+![An AI software factory: requirement, architecture analysis, plan, coding agents, review and tests, production, with failures looping back and humans only where judgment is required](/images/software-engineering-in-2027/software-factory.svg)
 
 I think 2027 will be the year when competition starts moving to this level.
 

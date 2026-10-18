@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="system-ui, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">AI adoption: software engineering runs about one year ahead of business</text>
+  <!-- year axis -->
+  <g font-size="22" fill="#6b7280" text-anchor="middle">
+    <text x="190" y="120">2023</text><text x="420" y="120">2024</text><text x="650" y="120">2025</text><text x="880" y="120">2026</text><text x="1090" y="120">2027</text>
+  </g>
+  <line x1="80" y1="135" x2="1180" y2="135" stroke="#d1d5db" stroke-width="2"/>
+  <!-- engineers row -->
+  <text x="95" y="168" font-size="22" font-weight="700" fill="#1d4ed8">Software engineers</text>
+  <g font-size="18" fill="#1e3a8a" text-anchor="middle">
+    <rect x="95" y="180" width="190" height="90" rx="12" fill="#dbeafe"/><text x="190" y="218">Curious about</text><text x="190" y="244">generative AI</text>
+    <rect x="325" y="180" width="190" height="90" rx="12" fill="#dbeafe"/><text x="420" y="218">AI assistant</text><text x="420" y="244">open in a tab</text>
+    <rect x="555" y="180" width="190" height="90" rx="12" fill="#bfdbfe"/><text x="650" y="218">Coding agents</text><text x="650" y="244">on whole repos</text>
+    <rect x="785" y="180" width="190" height="90" rx="12" fill="#93c5fd"/><text x="880" y="218">The SDLC itself</text><text x="880" y="244">is delegated</text>
+    <rect x="1000" y="180" width="180" height="90" rx="12" fill="#60a5fa"/><text x="1090" y="218" fill="#ffffff">Software</text><text x="1090" y="244" fill="#ffffff">factories</text>
+  </g>
+  <!-- business row, shifted one column -->
+  <text x="95" y="338" font-size="22" font-weight="700" fill="#b45309">Business</text>
+  <g font-size="18" fill="#78350f" text-anchor="middle">
+    <rect x="95" y="350" width="190" height="90" rx="12" fill="#f3f4f6"/><text x="190" y="388" fill="#6b7280">Barely</text><text x="190" y="414" fill="#6b7280">noticed</text>
+    <rect x="325" y="350" width="190" height="90" rx="12" fill="#fef3c7"/><text x="420" y="388">"What is this AI</text><text x="420" y="414">thing?"</text>
+    <rect x="555" y="350" width="190" height="90" rx="12" fill="#fde68a"/><text x="650" y="388">Experiments with</text><text x="650" y="414">single tasks</text>
+    <rect x="785" y="350" width="190" height="90" rx="12" fill="#fcd34d"/><text x="880" y="388">Automating</text><text x="880" y="414">separate processes</text>
+    <rect x="1000" y="350" width="180" height="90" rx="12" fill="#f59e0b"/><text x="1090" y="388" fill="#ffffff">Connected</text><text x="1090" y="414" fill="#ffffff">pipelines</text>
+  </g>
+  <!-- gap arrow -->
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+  <line x1="880" y1="285" x2="1080" y2="335" stroke="#374151" stroke-width="3" marker-end="url(#a)"/>
+  <text x="600" y="520" text-anchor="middle" font-size="22" fill="#374151">Each business stage repeats the engineering stage from the previous year.</text>
+  <text x="600" y="555" text-anchor="middle" font-size="22" fill="#374151">If the gap holds, 2027 is the year business connects isolated automations into systems.</text>
+</svg>
