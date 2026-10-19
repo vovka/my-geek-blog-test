@@ -14,9 +14,7 @@ tags:
 comments: true
 ---
 
-## TL;DR
-
-`parallel_matrix_formatter` is an RSpec formatter for `parallel_tests` and `parallel_split_test`. Every worker sends its results over a UNIX socket to process 1, which draws one progress display and prints one consolidated failure report with rerun commands.
+> **TL;DR:** `parallel_matrix_formatter` is an RSpec formatter for `parallel_tests` and `parallel_split_test`. Every worker sends its results over a UNIX socket to process 1, which draws one progress display and prints one consolidated failure report with rerun commands.
 
 The display is Matrix rain: one column per process, green and red katakana for passed and failed examples, a spoon for pending. Everything is configurable in YAML, down to a plain table of dots.
 

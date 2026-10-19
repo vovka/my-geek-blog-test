@@ -13,3 +13,9 @@ This history is the shared Geek Blog content source for two independent deployme
 - Keep Giscus repository/category IDs stable when changing the repository path.
 - Keep Giscus canonical backlinks on `https://blog.shcherbyna.me` in both deployments.
 - Use the private enhancer only through `npm run enhance` and `GEEK_BLOG_TOKEN`.
+
+## Article conventions
+
+- Every article starts with a TL;DR right after the front matter (and after the italic lead-in, if any), as a
+  Markdown blockquote so it stands out from the body: `> **TL;DR:** one paragraph, 3–5 sentences.`
+  Example: `content/posts/ai-can-govern-chaos-humans-cant-maybe-we-should-make-it-forget.md`.
