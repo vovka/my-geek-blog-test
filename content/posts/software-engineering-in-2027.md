@@ -4,7 +4,7 @@ date: "2026-09-23"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "My prediction for software engineering in 2027: AI adoption is moving from individual coding agents toward automated SDLCs, while 2026's AI-generated software may create a new wave of cleanup work."
-coverImage: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?ixid=M3w4MzY0NTR8MHwxfHNlYXJjaHwzfHxBSSUyMGNvZGluZyUyMHNvZnR3YXJlJTIwYXJjaGl0ZWN0dXJlfGVufDB8MHx8fDE3NjQ4MTIzMjh8MA&ixlib=rb-4.1.0&w=800&h=400&fit=crop"
+coverImage: "/images/software-engineering-in-2027/cover.jpg"
 tags:
   - AI
   - software engineering
@@ -28,7 +28,7 @@ In 2026, I think software engineering moved another step forward. The interestin
 
 Business is approximately one step behind. Today companies are experimenting with automation of separate workflows.
 
-![Timeline of AI adoption: each business stage repeats the software engineering stage from the previous year](/images/software-engineering-in-2027/one-year-gap.svg)
+![Timeline of AI adoption: each business stage repeats the software engineering stage from the previous year](/images/software-engineering-in-2027/one-year-gap.jpg)
 
 If this one-year gap continues, 2027 should be the year when businesses start connecting these isolated automations into complete systems.
 
@@ -48,7 +48,7 @@ The other group kept its engineering expertise and concentrated on making engine
 
 My guess is that these two approaches will produce very different results in 2027.
 
-![Two company strategies: replacing engineers with AI leads to a complexity ceiling, automating the SDLC around engineers leads to a software factory](/images/software-engineering-in-2027/two-paths.svg)
+![Two company strategies: replacing engineers with AI leads to a complexity ceiling, automating the SDLC around engineers leads to a software factory](/images/software-engineering-in-2027/two-paths.jpg)
 
 The first group will probably hit a complexity ceiling.
 
@@ -62,7 +62,7 @@ This is where "AI can write the code" stops being the interesting question.
 
 The question becomes whether anyone still understands the resulting system well enough to maintain it.
 
-![System complexity grows with every AI-generated feature while the owner's understanding stays flat; the crossing point is the complexity ceiling](/images/software-engineering-in-2027/complexity-ceiling.svg)
+![System complexity grows with every AI-generated feature while the owner's understanding stays flat; the crossing point is the complexity ceiling](/images/software-engineering-in-2027/complexity-ceiling.jpg)
 
 I expect 2026 to leave behind quite a lot of AI-generated slop: applications that work well enough today but whose owners will discover that they cannot safely extend or maintain them.
 
@@ -84,7 +84,7 @@ This starts looking less like an engineer using an AI assistant and more like a 
 
 I call these systems AI software factories.
 
-![An AI software factory: requirement, architecture analysis, plan, coding agents, review and tests, production, with failures looping back and humans only where judgment is required](/images/software-engineering-in-2027/software-factory.svg)
+![An AI software factory: requirement, architecture analysis, plan, coding agents, review and tests, production, with failures looping back and humans only where judgment is required](/images/software-engineering-in-2027/software-factory.jpg)
 
 I think 2027 will be the year when competition starts moving to this level.
 
