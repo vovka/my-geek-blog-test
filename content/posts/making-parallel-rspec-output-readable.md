@@ -44,21 +44,7 @@ There is no election. Both runners number their processes through `TEST_ENV_NUMB
 
 As examples finish, each process sends their results to the orchestrator:
 
-```text
-                     UNIX socket
-                         │
-        ┌────────────────┼────────────────┐
-        │                │                │
-    Process 1        Process 2        Process 3
-      RSpec             RSpec             RSpec
-        │                │                │
-        └───────────────►│◄───────────────┘
-                         │
-                    Orchestrator
-                         │
-                         ▼
-                    One terminal
-```
+![Three RSpec processes send their results over a UNIX socket to the orchestrator in process 1, which renders one terminal](/images/parallel-matrix-formatter/orchestrator.jpg)
 
 The orchestrator now has enough information to treat several independent RSpec runs as one logical run.
 
