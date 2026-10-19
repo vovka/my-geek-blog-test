@@ -14,6 +14,14 @@ tags:
 comments: true
 ---
 
+## TL;DR
+
+Software engineers adopt AI roughly one year before business does. In 2026 engineers started delegating the whole development process to agents. In 2027 I expect business to connect its isolated automations into complete pipelines.
+
+Companies that replaced engineers with AI will hit a complexity ceiling: the AI can still change the system, but nobody can check whether the change is right. Companies that kept engineers and automated the SDLC around them will run AI software factories.
+
+Prepare for both: learn to clean up the AI-generated slop of 2026, or learn to build a factory.
+
 I keep noticing roughly a one-year gap between AI adoption in software engineering and AI adoption in business.
 
 When generative AI first appeared, software engineers immediately became curious about it. Most businesses barely noticed.
