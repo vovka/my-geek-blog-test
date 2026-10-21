@@ -26,6 +26,8 @@ But there is a practical problem behind it.
 
 When an RSpec suite is split between several processes, each process has its own formatter and produces its own output. Once they all write into the same terminal, the result can become difficult to read. Progress, failures, warnings, application output, and summaries from different workers can all appear together.
 
+![Default RSpec output of four parallel_tests workers in one terminal: progress dots, stdout and stderr noise, a failure report and four separate summaries, all interleaved](/images/parallel-matrix-formatter/four-workers-default-formatters.png)
+
 I wanted the whole parallel run to behave more like one test run.
 
 So `parallel_matrix_formatter` collects events from all RSpec processes, renders one shared progress display, and prints one consolidated report when everything finishes.
