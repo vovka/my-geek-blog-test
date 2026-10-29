@@ -21,7 +21,7 @@ commentId: automated-ai-sdlc-what-i-tested-in-my-software-factory
 > step of my lifecycle that I did not build is the first one: recording and transcribing the customer conversation.
 > I think it fits the same pattern, and I describe how it would connect.
 
-In an earlier article I described a human-governed AI software development lifecycle as a model. This article is
+In an earlier article I described [the human-governed AI software development lifecycle](/human-governed-ai-software-development-lifecycle) as a model. This article is
 about the implementation. It covers the steps I actually tested in my software factory, what each step does, and
 what I learned. The final part covers the step I did not build.
 
@@ -143,9 +143,9 @@ Passing tests were not enough. Mocks hid real failures.
 - The review stage was dead in production while 950 tests were green. The fakes finished at once, so they could not
   model a real asynchronous process.
 
-The factory also drifted. After the first results, it mostly ran on itself. About 80 self-hosted features cost
-roughly $2,700, and almost none of the defects found came from the customer repository. The audit I wrote after this
-says it clearly: build the factory with ordinary human-reviewed pull requests, and use the factory only on target
+The factory also drifted. After the first results, it mostly ran on itself. By the time I audited it in September,
+about 80 self-hosted features had cost roughly $2,700, and almost none of the defects found came from the customer
+repository. The audit says it clearly: build the factory with ordinary human-reviewed pull requests, and use the factory only on target
 repositories.
 
 Humans still did real work: they answered gates, ran real GitHub and Git rehearsals, and fixed the cases where the
