@@ -4,7 +4,7 @@ date: "2026-10-28"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "A GitHub issue goes in, three stacked pull requests come out. What each stage of my software factory does, what worked on a real repository, and the one step I did not build: recording and transcribing the customer conversation."
-coverImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85"
+coverImage: "/images/automated-ai-sdlc/cover.jpg"
 tags:
   - AI-assisted development
   - agentic software engineering
@@ -39,7 +39,9 @@ flowchart LR
     M --> V[Verify]:::code
     V -->|fail| R[Repair]:::ai
     R --> V
-    V -->|pass| W[Review]:::ai
+    V -->|pass| X[Exercise, optional]:::ai
+    X --> W[Review]:::ai
+    X -->|finding| R
     W -->|P0 or P1| R
     W -->|clean| G[Merge gate]:::human
     G --> D[Done]:::code
@@ -105,7 +107,24 @@ again. The loop has three exits:
 - two rounds in a row change nothing;
 - the review finds a P0 or P1 problem that repair cannot fix, and the feature escalates to a human.
 
-### 7. Review
+### 7. Exercise (optional)
+
+Verification runs checks. Review reads a diff. Neither one runs the thing that was built. The optional
+*exercising* stage fills that gap. It sits between verify and review and is off until the configuration names how
+to start, probe, and stop the application:
+
+```yaml
+exercise:
+  start: docker compose -f compose.factory.yaml up -d
+  ready: curl -sf http://localhost:3000/healthz
+  stop:  docker compose -f compose.factory.yaml down -v
+```
+
+With that in place, an agent starts the application, drives it with a browser or with the CLI's own commands, and
+reports what it saw with a severity. A finding goes to repair; a clean run goes to review. I added this stage late
+and ran it only on the factory itself, not on the customer repository.
+
+### 8. Review
 
 A separate review agent reads the specification, the diff, and the evidence. It returns findings with a severity.
 P0 and P1 findings block delivery and trigger repair. P2 findings get one last repair round, then the feature may
@@ -113,7 +132,7 @@ ship with the verdict recorded.
 
 On a real pull request, the review agent found three defects. Two of them no human had noticed.
 
-### 8. Merge
+### 9. Merge
 
 A human merges, or an optional coordinator merges the stack one edge per tick. Conflicts send the feature back to
 repair. Objective failures put it in `blocked`, where a human chooses the way out.
@@ -133,6 +152,30 @@ Five features in total cost $12.45 in agent spend.
 
 Different stages can use different agent tools. The configuration names a backend, a model, and an effort for each
 stage: Claude, Codex, OpenCode, or KiloCode. The lifecycle does not depend on one vendor.
+
+## Dark mode: an agent at the gate
+
+The three human gates are the slow part. Each one waits for a person to read an artifact and reply. To test how
+far the pipeline can run without me, I added *dark mode*: a gate agent reads the brief, the architecture, or the
+plan and answers `GATE: APPROVED` or `GATE: CHANGES REQUESTED` in place of the human.
+
+Two rules make this safe enough to try:
+
+- **A different model judges.** The gate agent must not be the model that wrote the artifact, or it usually
+  agrees with itself. The configuration routes the producer and the operator to different backends:
+
+  ```yaml
+  agents:
+    default: claude|opus|xhigh
+    operate-architecture: codex|gpt-5-codex|low
+    operate-plan: codex|gpt-5-codex|low
+  ```
+
+- **The agent cannot merge.** Dark mode never merges a branch. A gate that runs out of rounds, or whose answer
+  is not readable, moves the feature to `blocked`, where a human decides.
+
+I ran dark mode only on the factory's own repository. It carried about 80 of the self-hosted features through the
+gates. It has not run against a customer repository, so I count it as a working experiment, not a proven step.
 
 ## What did not work
 
