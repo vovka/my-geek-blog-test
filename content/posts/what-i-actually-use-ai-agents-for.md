@@ -4,6 +4,7 @@ date: "2026-11-03"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "AI agents are a proxy for almost everything I do on a computer: code, job search, a mentor bot, an automated art shop, a book, email, search and my own Ubuntu. Then I checked the story against my own session logs."
+coverImage: "/images/what-i-actually-use-ai-agents-for/cover.svg"
 tags:
   - AI agents
   - Claude Code
