@@ -4,7 +4,7 @@ date: "2026-11-03"
 author: "Volodymyr Shcherbyna"
 category: "AI"
 excerpt: "How to manage many AI agents when your mind works like an ADHD mind. My Claude Code workers lost context, waited on permission prompts and left decisions everywhere. The desk is one Claude session that sends briefs, collects decision cards and keeps a board in plain files."
-coverImage: "/images/desk-one-chat-for-many-coding-agents/cover.svg"
+coverImage: "/images/desk-one-chat-for-many-coding-agents/cover.jpg"
 tags:
   - AI agents
   - Claude Code
